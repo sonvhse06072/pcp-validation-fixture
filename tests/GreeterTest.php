@@ -19,6 +19,10 @@ final class GreeterTest
                 'input' => '  Grace  ',
                 'expected' => 'Hello, Grace!',
             ],
+            'whitespace-only input' => [
+                'input' => '   ',
+                'expected' => 'Hello, friend!',
+            ],
         ];
     }
 }
