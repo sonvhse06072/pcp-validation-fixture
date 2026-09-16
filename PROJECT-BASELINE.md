@@ -1,7 +1,7 @@
 # PCP Validation Fixture ProjectBaseline
 
-Baseline revision: `validation-v1-2026-09-16`
-Status: Human Owner approved on 2026-09-16.
+Baseline revision: `validation-v2-2026-09-16-r3`
+Status: Human Owner approved on 2026-09-17 under PCP #199.
 
 This document is the source-of-truth frame for the dedicated non-production `pcp-validation-fixture` project used by the Personal Coding Platform operational-validation path.
 
@@ -26,7 +26,7 @@ This document is the source-of-truth frame for the dedicated non-production `pcp
 - All functional changes must use `ai/*` branches and pull requests to `main`.
 - Required verification must remain enforcing and must not use `|| true` escape paths.
 - PCP routine validation work must remain non-security, non-architecture, non-dependency, non-migration, non-production, and independently verifiable.
-- The currently approved immediate routine task is test-only: add a regression case proving whitespace-only Greeter input returns the already-supported `Hello, friend!` result without changing public behavior.
+- The currently approved immediate routine task is test-only: add one mixed whitespace-only Greeter regression case containing spaces/tabs/newlines and prove it returns the already-supported `Hello, friend!` result without changing public behavior.
 
 ## Architecture constraints
 
@@ -61,10 +61,11 @@ This document is the source-of-truth frame for the dedicated non-production `pcp
 
 ## Roadmap frame
 
-1. Establish and register this approved ProjectBaseline in PCP, pinned to the exact fixture commit containing this document.
-2. Re-run fresh idle, duplicate, repository-readiness, and deterministic baseline gates before operational validation.
-3. Create exactly one legitimate plan through PCP `POST /v1/plans` for the routine task: add the missing whitespace-only Greeter regression test without changing implementation behavior.
-4. Let PCP proceed through implementation, layered deterministic verification, proportional review, PR/CI, and constrained PM merge without manual merge intervention.
-5. Capture telemetry, Human-attention, PM-merge audit, and continuity evidence for PCP issues #162 and #146.
+1. Treat the completed R2 merge commit `c91666947dce59fc12d263da99597875eb561798` as the pre-refresh fixture application state; R2 remains defect-discovery/recovery evidence rather than the final clean zero-intervention proof.
+2. Register this approved ProjectBaseline revision in PCP pinned to the exact fixture commit containing this document.
+3. Re-run fresh idle, duplicate, repository-readiness, credential-boundary, and deterministic baseline gates before operational validation.
+4. Create exactly one legitimate plan through PCP `POST /v1/plans` for `pcp-validation-fixture#7`: add one mixed whitespace-only Greeter regression case in `tests/GreeterTest.php` without changing implementation behavior.
+5. Let PCP proceed through implementation, layered deterministic verification, proportional review, PR/CI, and constrained PM merge without manual branch/PR/merge intervention or delivery recovery.
+6. Capture telemetry, Human-attention, delivery-retry, PM-merge audit, and continuity evidence for PCP issues #162 and #146.
 
 Any work outside this frame requires a new baseline revision or another applicable Human Owner-approved decision before execution.
