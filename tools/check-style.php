@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 $roots = [
-    __DIR__ . '/../web/modules/custom',
+    __DIR__ . '/../web',
     __DIR__ . '/../tests',
     __DIR__,
 ];
