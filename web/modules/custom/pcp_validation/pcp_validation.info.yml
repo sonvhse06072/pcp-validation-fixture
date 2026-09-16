@@ -1,0 +1,5 @@
+name: PCP Validation
+type: module
+description: 'Non-production custom module surface for Personal Coding Platform validation.'
+package: PCP Validation
+core_version_requirement: '^10 || ^11'
