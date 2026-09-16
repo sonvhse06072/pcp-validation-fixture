@@ -23,6 +23,10 @@ final class GreeterTest
                 'input' => '   ',
                 'expected' => 'Hello, friend!',
             ],
+            'mixed whitespace (spaces, tab, newline)' => [
+                'input' => "   \n  \t  ",
+                'expected' => 'Hello, friend!',
+            ],
         ];
     }
 }
