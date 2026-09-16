@@ -28,7 +28,7 @@ jobs:
         run: php tools/check-style.php
 
       - name: Static syntax gate
-        run: find web/modules/custom tests tools -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: find web tests tools -type f -name '*.php' -print0 | xargs -0 -n1 php -l
 
       - name: Full tests
         run: php tools/run-tests.php
