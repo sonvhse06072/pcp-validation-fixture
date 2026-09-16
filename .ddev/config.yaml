@@ -1,0 +1,11 @@
+name: pcp-validation-fixture
+type: php
+docroot: web
+php_version: "8.3"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+database:
+  type: mariadb
+  version: "10.11"
+composer_version: "2"
+use_dns_when_possible: true
